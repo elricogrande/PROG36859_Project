@@ -46,6 +46,7 @@ public class Main extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		ServletConfig config = getServletConfig();
+		
 		// This section is to be replaced by authentication code
 		session.setAttribute("user", 11111);
 		session.setAttribute("isAdmin", true);
@@ -81,13 +82,6 @@ public class Main extends HttpServlet {
 	public void init() throws ServletException {
 		//super.init(config);
 		da = new DataAccess();
-		if (!da.connect()) {
-			errMessage += "DB: Can't connect to database.<br />";
-			return;
-		}
-		else if (!da.prepareStatements()) {
-			errMessage += "DB: Can't create SQL statements.<br />";
-		}
 	}
 
 	@Override

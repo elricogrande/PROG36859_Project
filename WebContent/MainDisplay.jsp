@@ -11,7 +11,7 @@
 		if ((Boolean) session.getAttribute("isClient")) {
 	%>
 	<ol class="list">
-		<li><a href="client/Search">Search Library Resources</a></li>
+		<li><a href="Search">Search Library Resources</a></li>
 		<li><a href="client/Loans">View Loan History</a></li>
 	</ol>
 	<%

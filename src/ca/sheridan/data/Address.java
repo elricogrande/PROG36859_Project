@@ -4,6 +4,7 @@ public class Address {
 	private int addressId;
 	private String street;
 	private String city;
+	private String province;
 	private String country;
 	private String postCode;
 	public int getAddressId() {
@@ -23,6 +24,12 @@ public class Address {
 	}
 	public void setCity(String city) {
 		this.city = city;
+	}
+	public String getProvince() {
+		return province;
+	}
+	public void setProvince(String province) {
+		this.province = province;
 	}
 	public String getCountry() {
 		return country;
